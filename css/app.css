@@ -31,7 +31,34 @@
   height: 300px;
   margin-top: 60px;
   margin-left: 450px;
+  position: absolute;
+  box-sizing: border-box;
   position: absolute; }
+
+.ventanaContacto {
+  border: 2px solid #D2D2D2;
+  width: 600px;
+  height: 300px;
+  margin-top: 60px;
+  margin-left: 350px;
+  position: absolute;
+  box-sizing: border-box;
+  position: absolute; }
+
+.ventanaCalendario {
+  border: 2px solid #D2D2D2;
+  width: 600px;
+  height: 300px;
+  margin-top: 60px;
+  margin-left: 550px;
+  position: absolute;
+  box-sizing: border-box;
+  position: absolute; }
+
+.resize-container {
+  display: inline-block;
+  width: 100vw;
+  height: 1000px; }
 
 /* Extra small devices (phones, 600px and down) */
 /* Small devices (portrait tablets and large phones, 600px and up) */
