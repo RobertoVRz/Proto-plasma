@@ -1,313 +1,525 @@
 <!doctype html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--Carga de CSS-->
-    <link href="css/app.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>Proto-Plasma</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Carga de CSS-->
+  <link href="css/app.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <title>Proto-Plasma</title>
 </head>
+<!--El escritorio-->
 <body class="bgDesktop">
-    <div class="elEscritorio">
-        <div class="elDocker">
-                <a onclick="activarVentanaInfo()"><img class="icono" src="img/iconos/prto_web.svg"></a>
-                <a onclick="activarVentanaCalendario()"><img class="icono" src="img/iconos/prto_ubicacion.svg"></a>
-                <a onclick="activarVentanaContacto()"><img class="icono" src="img/iconos/prto_contacto.svg"></a>
+  <div class="elEscritorio">
+    <div class="elDocker">
+      <div class="iconosPs">
+        <a onclick="activarVentanaCalendario()"><img class="icono" src="img/iconos/prto_diseño3d.svg"></a>
+        <a onclick="activarVentanaMapa()"><img class="icono" src="img/iconos/proto_sombra_pin.svg"></a>
+        <a onclick="activarVentanaContacto()"><img class="icono" src="img/iconos/proto_sombra_contacto.svg"></a>
+      </div>
+    </div>
+    
+<!--Area de ventanas-->
+    <div class="resize-container">
+
+      <!--Accesos directos-->
+    <div class="AccDir">
+        <a onclick="activarVentanaInfo()"><img class="iconoDesktop" src="img/iconos/proto_sombra_web.svg"></a><br>
+        <label id="mision" >¿Quiénes somos?</label>
+    </div>
+<!--Ventana Info-->
+      <div class="ventanaInfo" id="ventana1" onclick="enfrenteInfo()" style="display:block">
+        <div class="barraUp">
+          <a onclick="cerrarVentanaInfo()"><i class="fas fa-times-circle"></i></a>
+          <span class="spanTitulo">Info</span>
+        </div>
+        <div class="contenidoVentanaInfo">
+            <div class="arduinoBox">
+            <img class="arduino" src="img/iconos/prto_arduino.svg">
+            <h1>Arduino</h1>
+            <p>A pesar de no ser tan conocido este término, los arduinos son herramientas que facilitan el uso de la electrónica en proyectos multidisciplinarios.</p>
+            <p>Éstos se encuentran en casi todos lados, pues permiten que la tecnología interaccione con el mundo, en otras palabras, podrás aprender a programar estos microprocesadores para que hagan múltiples cosas como  prender luces al ritmo de la música, manejar robots, hasta automatizar cualquier cosa, en fin, todo lo que se te ocurra diseñar.</p>
+          </div>
+          
+        </div>
+      </div>
+<!--Ventana Mapa-->
+      <div class="ventanaMapa" id="ventana4" onclick="enfrenteMapa()" style="display:none">
+          <div class="barraUp">
+            <a onclick="cerrarVentanaMapa()"><i class="fas fa-times-circle"></i></a>
+            <span class="spanTitulo">Mapa</span>
+          </div>
+          <div id="map"></div>
         </div>
 
-        <div class="resize-container" >
-                <div class="ventanaInfo" id="ventana1" onclick="enfrenteInfo()" style="display:none">
-                  <div class="barraUp" >
-                    <a onclick="cerrarVentanaInfo()"><i class="fas fa-times-circle"></i></a>
-                  </div>
-                        <h1>Info</h1>
-                </div>
+      <div class="ventanaCalendario" id="ventana2" onclick="enfrenteCal()" style="display:none">
+        <div class="barraUp">
+          <a onclick="cerrarVentanaCalendario()"><i class="fas fa-times-circle"></i></a>
+          <span class="spanTitulo">Calendario</span>
+        </div>
+        <h1>Calendario</h1>
+      </div>
 
-                <div class="ventanaCalendario" id="ventana2" onclick="enfrenteCal()" style="display:none">
-                  <div class="barraUp">
-                    <a onclick="cerrarVentanaCalendario()"><i class="fas fa-times-circle"></i></a>
-                  </div>
-                        <h1>Calendario</h1>
-                </div>
-
-                <div class="ventanaContacto" id="ventana3" onclick="enfrenteCont()" style="display:none">
-                  <div class="barraUp">
-                    <a onclick="cerrarVentanaContacto()"><i class="fas fa-times-circle"></i></a>
-                  </div>
-                        <h1>Contacto</h1>
-                </div>
-              </div>
-
-        
-        
-        
+      <div class="ventanaContacto" id="ventana3" onclick="enfrenteCont()" style="display:none">
+        <div class="barraUp">
+          <a onclick="cerrarVentanaContacto()"><i class="fas fa-times-circle"></i></a>
+          <span class="spanTitulo">Contacto</span>
+        </div>
+        <div class="contenidoVentana">
+          <img class="iconoVentana" src="img/iconos/prto_contacto.svg">
+          <p>(222) 293 3331</p>
+          <div class="iconosAlineados">
+              <a href="https://www.facebook.com/protoplasma.mx/" target="_blank"><img class="icono" src="img/iconos/prto_fb.svg"></a>
+              <a href="https://www.instagram.com/protoplasma.mx/" target="_blank"><img class="icono" src="img/iconos/prto_insta.svg"></a>
+              <p>Protoplasma.mx</p>
+              <a onclick="activarVentanaMapa()"><img class="icono" src="img/iconos/prto_ubicacion.svg"></a>
+              <p>Circuito Olmeca 409 loc. 9<br>
+              Santiago Momoxpan</p>
+            </div>
+        </div>
+      </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/interactjs@1.3.4/dist/interact.min.js"></script>
 
-    <script>
-        function activarVentanaInfo() {
-                document.getElementById("ventana1").style.display = "block";
-        }
 
-        function activarVentanaCalendario() {
-                document.getElementById("ventana2").style.display = "block";
-        }
 
-        function activarVentanaContacto() {
-                document.getElementById("ventana3").style.display = "block";
-        }
-    </script>
+  </div>
 
-<script>
-  function cerrarVentanaInfo() {
-          document.getElementById("ventana1").style.display = "none";
-  }
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/interactjs@1.3.4/dist/interact.min.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
 
-  function cerrarVentanaCalendario() {
-          document.getElementById("ventana2").style.display = "none";
-  }
-
-  function cerrarVentanaContacto() {
-          document.getElementById("ventana3").style.display = "none";
-  }
-</script>
-<script>
-  function enfrenteInfo() {
-          document.getElementById("ventana1").style.zIndex = "2";
-          document.getElementById("ventana2").style.zIndex = "1";
-          document.getElementById("ventana3").style.zIndex = "1";
-  }
-
-  function enfrenteCal() {
-
-    document.getElementById("ventana1").style.zIndex = "1";
-    document.getElementById("ventana2").style.zIndex = "2";
-    document.getElementById("ventana3").style.zIndex = "1";
-  }
-
-  function enfrenteCont() {
-    document.getElementById("ventana1").style.zIndex = "1";
-    document.getElementById("ventana2").style.zIndex = "1";
-    document.getElementById("ventana3").style.zIndex = "2";
-  }
-</script>
+  <script>
+    $(document).ready(function() {
+      $(".contenidoVentanaInfo").niceScroll(".wrap",{cursorcolor:"aquamarine"});
+      });
     
-    <script>
-        // target elements with the "draggable" class
-        interact('.ventanaInfo')
-  .draggable({
-    allowFrom: '.barraUp',
-    onmove: window.dragMoveListener,
-    restrict: {
-      restriction: 'parent',
-      elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
-    },
-  })
-  .resizable({
-    // resize from all edges and corners
-    edges: { left: true, right: true, bottom: true, top: false },
+  </script>
 
-    // keep the edges inside the parent
-    restrictEdges: {
-      outer: 'parent',
-      endOnly: true,
-    },
+  <script>
+    function activarVentanaInfo() {
+      document.getElementById("ventana1").style.display = "block";
+    }
 
-    // minimum size
-    restrictSize: {
-      min: { width: 100, height: 50 },
-    },
+    function activarVentanaCalendario() {
+      document.getElementById("ventana2").style.display = "block";
+    }
 
-    inertia: true,
-  })
-  .on('resizemove', function (event) {
-    var target = event.target,
-        x = (parseFloat(target.getAttribute('data-x')) || 0),
-        y = (parseFloat(target.getAttribute('data-y')) || 0);
+    function activarVentanaContacto() {
+      document.getElementById("ventana3").style.display = "block";
+    }
 
-    // update the element's style
-    target.style.width  = event.rect.width + 'px';
-    target.style.height = event.rect.height + 'px';
+    function activarVentanaMapa() {
+      document.getElementById("ventana4").style.display = "block";
+    }
+  </script>
 
-    // translate when resizing from top or left edges
-    x += event.deltaRect.left;
-    y += event.deltaRect.top;
+  <script>
+    function cerrarVentanaInfo() {
+      document.getElementById("ventana1").style.display = "none";
+    }
 
-    target.style.webkitTransform = target.style.transform =
-        'translate(' + x + 'px,' + y + 'px)';
+    function cerrarVentanaCalendario() {
+      document.getElementById("ventana2").style.display = "none";
+    }
 
-    target.setAttribute('data-x', x);
-    target.setAttribute('data-y', y);
-    //target.textContent = Math.round(event.rect.width) + '\u00D7' + Math.round(event.rect.height);
-  });
+    function cerrarVentanaContacto() {
+      document.getElementById("ventana3").style.display = "none";
+    }
 
-  function dragMoveListener (event) {
-    var target = event.target,
+    function cerrarVentanaMapa() {
+      document.getElementById("ventana4").style.display = "none";
+    }
+  </script>
+  <script>
+    function enfrenteInfo() {
+      document.getElementById("ventana1").style.zIndex = "2";
+      document.getElementById("ventana2").style.zIndex = "1";
+      document.getElementById("ventana3").style.zIndex = "1";
+      document.getElementById("ventana4").style.zIndex = "1";
+    }
+
+    function enfrenteCal() {
+
+      document.getElementById("ventana1").style.zIndex = "1";
+      document.getElementById("ventana2").style.zIndex = "2";
+      document.getElementById("ventana3").style.zIndex = "1";
+      document.getElementById("ventana4").style.zIndex = "1";
+    }
+
+    function enfrenteCont() {
+      document.getElementById("ventana1").style.zIndex = "1";
+      document.getElementById("ventana2").style.zIndex = "1";
+      document.getElementById("ventana3").style.zIndex = "2";
+      document.getElementById("ventana4").style.zIndex = "1";
+    }
+
+    function enfrenteMapa() {
+      document.getElementById("ventana1").style.zIndex = "1";
+      document.getElementById("ventana2").style.zIndex = "1";
+      document.getElementById("ventana3").style.zIndex = "1";
+      document.getElementById("ventana4").style.zIndex = "2";
+    }
+  </script>
+
+  <script>
+    // target elements with the "draggable" class
+    interact('.ventanaInfo')
+      .draggable({
+        allowFrom: '.barraUp',
+        onmove: window.dragMoveListener,
+        restrict: {
+          restriction: 'parent',
+          elementRect: {
+            top: 0,
+            left: 0,
+            bottom: 1,
+            right: 1
+          }
+        },
+      })
+      .resizable({
+        // resize from all edges and corners
+        edges: {
+          left: true,
+          right: true,
+          bottom: true,
+          top: false
+        },
+
+        // keep the edges inside the parent
+        restrictEdges: {
+          outer: 'parent',
+          endOnly: true,
+        },
+
+        // minimum size
+        restrictSize: {
+          min: {
+            width: 100,
+            height: 50
+          },
+        },
+
+        inertia: true,
+      })
+      .on('resizemove', function (event) {
+        var target = event.target,
+          x = (parseFloat(target.getAttribute('data-x')) || 0),
+          y = (parseFloat(target.getAttribute('data-y')) || 0);
+
+        // update the element's style
+        target.style.width = event.rect.width + 'px';
+        target.style.height = event.rect.height + 'px';
+
+        // translate when resizing from top or left edges
+        x += event.deltaRect.left;
+        y += event.deltaRect.top;
+
+        target.style.webkitTransform = target.style.transform =
+          'translate(' + x + 'px,' + y + 'px)';
+
+        target.setAttribute('data-x', x);
+        target.setAttribute('data-y', y);
+        //target.textContent = Math.round(event.rect.width) + '\u00D7' + Math.round(event.rect.height);
+      });
+
+    function dragMoveListener(event) {
+      var target = event.target,
         // keep the dragged position in the data-x/data-y attributes
         x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
         y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
 
-    // translate the element
-    target.style.webkitTransform =
-    target.style.transform =
-      'translate(' + x + 'px, ' + y + 'px)';
+      // translate the element
+      target.style.webkitTransform =
+        target.style.transform =
+        'translate(' + x + 'px, ' + y + 'px)';
 
-    // update the posiion attributes
-    target.setAttribute('data-x', x);
-    target.setAttribute('data-y', y);
-  }
+      // update the posiion attributes
+      target.setAttribute('data-x', x);
+      target.setAttribute('data-y', y);
+    }
 
-  // this is used later in the resizing and gesture demos
-  window.dragMoveListener = dragMoveListener;
-    
-    </script>
+    // this is used later in the resizing and gesture demos
+    window.dragMoveListener = dragMoveListener;
+  </script>
 
 <script>
-        // target elements with the "draggable" class
-        interact('.ventanaCalendario')
-  .draggable({
-    allowFrom: '.barraUp',
-    onmove: window.dragMoveListener,
-    restrict: {
-      restriction: 'parent',
-      elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
-    },
-  })
-  .resizable({
-    // resize from all edges and corners
-    edges: { left: true, right: true, bottom: true, top: false },
+    // target elements with the "draggable" class
+    interact('.ventanaMapa')
+      .draggable({
+        allowFrom: '.barraUp',
+        onmove: window.dragMoveListener,
+        restrict: {
+          restriction: 'parent',
+          elementRect: {
+            top: 0,
+            left: 0,
+            bottom: 1,
+            right: 1
+          }
+        },
+      })
+      .resizable({
+        // resize from all edges and corners
+        edges: {
+          left: true,
+          right: true,
+          bottom: true,
+          top: false
+        },
 
-    // keep the edges inside the parent
-    restrictEdges: {
-      outer: 'parent',
-      endOnly: true,
-    },
+        // keep the edges inside the parent
+        restrictEdges: {
+          outer: 'parent',
+          endOnly: true,
+        },
 
-    // minimum size
-    restrictSize: {
-      min: { width: 100, height: 50 },
-    },
+        // minimum size
+        restrictSize: {
+          min: {
+            width: 100,
+            height: 50
+          },
+        },
 
-    inertia: true,
-  })
-  .on('resizemove', function (event) {
-    var target = event.target,
-        x = (parseFloat(target.getAttribute('data-x')) || 0),
-        y = (parseFloat(target.getAttribute('data-y')) || 0);
+        inertia: true,
+      })
+      .on('resizemove', function (event) {
+        var target = event.target,
+          x = (parseFloat(target.getAttribute('data-x')) || 0),
+          y = (parseFloat(target.getAttribute('data-y')) || 0);
 
-    // update the element's style
-    target.style.width  = event.rect.width + 'px';
-    target.style.height = event.rect.height + 'px';
+        // update the element's style
+        target.style.width = event.rect.width + 'px';
+        target.style.height = event.rect.height + 'px';
 
-    // translate when resizing from top or left edges
-    x += event.deltaRect.left;
-    y += event.deltaRect.top;
+        // translate when resizing from top or left edges
+        x += event.deltaRect.left;
+        y += event.deltaRect.top;
 
-    target.style.webkitTransform = target.style.transform =
-        'translate(' + x + 'px,' + y + 'px)';
+        target.style.webkitTransform = target.style.transform =
+          'translate(' + x + 'px,' + y + 'px)';
 
-    target.setAttribute('data-x', x);
-    target.setAttribute('data-y', y);
-    //target.textContent = Math.round(event.rect.width) + '\u00D7' + Math.round(event.rect.height);
-  });
+        target.setAttribute('data-x', x);
+        target.setAttribute('data-y', y);
+        //target.textContent = Math.round(event.rect.width) + '\u00D7' + Math.round(event.rect.height);
+      });
 
-  function dragMoveListener (event) {
-    var target = event.target,
+    function dragMoveListener(event) {
+      var target = event.target,
         // keep the dragged position in the data-x/data-y attributes
         x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
         y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
 
-    // translate the element
-    target.style.webkitTransform =
-    target.style.transform =
-      'translate(' + x + 'px, ' + y + 'px)';
+      // translate the element
+      target.style.webkitTransform =
+        target.style.transform =
+        'translate(' + x + 'px, ' + y + 'px)';
 
-    // update the posiion attributes
-    target.setAttribute('data-x', x);
-    target.setAttribute('data-y', y);
-  }
+      // update the posiion attributes
+      target.setAttribute('data-x', x);
+      target.setAttribute('data-y', y);
+    }
 
-  // this is used later in the resizing and gesture demos
-  window.dragMoveListener = dragMoveListener;
-    
-    </script>
+    // this is used later in the resizing and gesture demos
+    window.dragMoveListener = dragMoveListener;
+  </script>
 
-<script>
-        // target elements with the "draggable" class
-        interact('.ventanaContacto')
-  .draggable({
-    allowFrom: '.barraUp',
-    onmove: window.dragMoveListener,
-    restrict: {
-      restriction: 'parent',
-      elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
-    },
-  })
-  .resizable({
-    // resize from all edges and corners
-    edges: { left: true, right: true, bottom: true, top: false },
+  <script>
+    // target elements with the "draggable" class
+    interact('.ventanaCalendario')
+      .draggable({
+        allowFrom: '.barraUp',
+        onmove: window.dragMoveListener,
+        restrict: {
+          restriction: 'parent',
+          elementRect: {
+            top: 0,
+            left: 0,
+            bottom: 1,
+            right: 1
+          }
+        },
+      })
+      .resizable({
+        // resize from all edges and corners
+        edges: {
+          left: true,
+          right: true,
+          bottom: true,
+          top: false
+        },
 
-    // keep the edges inside the parent
-    restrictEdges: {
-      outer: 'parent',
-      endOnly: true,
-    },
+        // keep the edges inside the parent
+        restrictEdges: {
+          outer: 'parent',
+          endOnly: true,
+        },
 
-    // minimum size
-    restrictSize: {
-      min: { width: 100, height: 50 },
-    },
+        // minimum size
+        restrictSize: {
+          min: {
+            width: 100,
+            height: 50
+          },
+        },
 
-    inertia: true,
-  })
-  .on('resizemove', function (event) {
-    var target = event.target,
-        x = (parseFloat(target.getAttribute('data-x')) || 0),
-        y = (parseFloat(target.getAttribute('data-y')) || 0);
+        inertia: true,
+      })
+      .on('resizemove', function (event) {
+        var target = event.target,
+          x = (parseFloat(target.getAttribute('data-x')) || 0),
+          y = (parseFloat(target.getAttribute('data-y')) || 0);
 
-    // update the element's style
-    target.style.width  = event.rect.width + 'px';
-    target.style.height = event.rect.height + 'px';
+        // update the element's style
+        target.style.width = event.rect.width + 'px';
+        target.style.height = event.rect.height + 'px';
 
-    // translate when resizing from top or left edges
-    x += event.deltaRect.left;
-    y += event.deltaRect.top;
+        // translate when resizing from top or left edges
+        x += event.deltaRect.left;
+        y += event.deltaRect.top;
 
-    target.style.webkitTransform = target.style.transform =
-        'translate(' + x + 'px,' + y + 'px)';
+        target.style.webkitTransform = target.style.transform =
+          'translate(' + x + 'px,' + y + 'px)';
 
-    target.setAttribute('data-x', x);
-    target.setAttribute('data-y', y);
-    //target.textContent = Math.round(event.rect.width) + '\u00D7' + Math.round(event.rect.height);
-  });
+        target.setAttribute('data-x', x);
+        target.setAttribute('data-y', y);
+        //target.textContent = Math.round(event.rect.width) + '\u00D7' + Math.round(event.rect.height);
+      });
 
-  function dragMoveListener (event) {
-    var target = event.target,
+    function dragMoveListener(event) {
+      var target = event.target,
         // keep the dragged position in the data-x/data-y attributes
         x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
         y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
 
-    // translate the element
-    target.style.webkitTransform =
-    target.style.transform =
-      'translate(' + x + 'px, ' + y + 'px)';
+      // translate the element
+      target.style.webkitTransform =
+        target.style.transform =
+        'translate(' + x + 'px, ' + y + 'px)';
 
-    // update the posiion attributes
-    target.setAttribute('data-x', x);
-    target.setAttribute('data-y', y);
-  }
+      // update the posiion attributes
+      target.setAttribute('data-x', x);
+      target.setAttribute('data-y', y);
+    }
 
-  // this is used later in the resizing and gesture demos
-  window.dragMoveListener = dragMoveListener;
-    
+    // this is used later in the resizing and gesture demos
+    window.dragMoveListener = dragMoveListener;
+  </script>
+
+  <script>
+    // target elements with the "draggable" class
+    interact('.ventanaContacto')
+      .draggable({
+        allowFrom: '.barraUp',
+        onmove: window.dragMoveListener,
+        restrict: {
+          restriction: 'parent',
+          elementRect: {
+            top: 0,
+            left: 0,
+            bottom: 1,
+            right: 1
+          }
+        },
+      })
+      .resizable({
+        // resize from all edges and corners
+        edges: {
+          left: true,
+          right: true,
+          bottom: true,
+          top: false
+        },
+
+        // keep the edges inside the parent
+        restrictEdges: {
+          outer: 'parent',
+          endOnly: true,
+        },
+
+        // minimum size
+        restrictSize: {
+          min: {
+            width: 420,
+            height: 420
+          },
+        },
+
+        inertia: true,
+      })
+      .on('resizemove', function (event) {
+        var target = event.target,
+          x = (parseFloat(target.getAttribute('data-x')) || 0),
+          y = (parseFloat(target.getAttribute('data-y')) || 0);
+
+        // update the element's style
+        target.style.width = event.rect.width + 'px';
+        target.style.height = event.rect.height + 'px';
+
+        // translate when resizing from top or left edges
+        x += event.deltaRect.left;
+        y += event.deltaRect.top;
+
+        target.style.webkitTransform = target.style.transform =
+          'translate(' + x + 'px,' + y + 'px)';
+
+        target.setAttribute('data-x', x);
+        target.setAttribute('data-y', y);
+        //target.textContent = Math.round(event.rect.width) + '\u00D7' + Math.round(event.rect.height);
+      });
+
+    function dragMoveListener(event) {
+      var target = event.target,
+        // keep the dragged position in the data-x/data-y attributes
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+      // translate the element
+      target.style.webkitTransform =
+        target.style.transform =
+        'translate(' + x + 'px, ' + y + 'px)';
+
+      // update the posiion attributes
+      target.setAttribute('data-x', x);
+      target.setAttribute('data-y', y);
+    }
+
+    // this is used later in the resizing and gesture demos
+    window.dragMoveListener = dragMoveListener;
+  </script>
+  
+  <script>
+      function initMap() {
+        var uluru = {lat: 19.054439, lng: -98.297881};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 20,
+          center: uluru
+        });
+        var image = 'img/iconos/prto_ubicacion.svg';
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+          icon: image
+        });
+      }
     </script>
-    
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgaoHSbtK3Czv9imqCA4sYxweRW_7pAAo&callback=initMap">
+    </script>
+
 </body>
+
 </html>
