@@ -1,48 +1,10 @@
 .bgDesktop
     background-color: $azul
-    height: 100vh
-    widows: 100vw
+    +wh(100vw,100vh)
+    overflow-y: hidden
 
 .elEscritorio
     +wh(100%,100%)
-
-.elDocker
-    border: 1px solid $gris
-    +wh(22%,7%)
-    +marginTL(600px,450px)
-    position: absolute
-
-.fa-brain
-    color: white
-    font-size: 50px
-    margin-left: 30px
-    cursor: pointer
-
-.ventanaInfo
-    border: 2px solid $gris
-    +wh(600px,300px)
-    +marginTL(60px,450px)
-    position: absolute
-    box-sizing: border-box
-    position: absolute
-
-.ventanaContacto
-    border: 2px solid $gris
-    +wh(600px,300px)
-    +marginTL(60px,350px)
-    position: absolute
-    box-sizing: border-box
-    position: absolute
-
-.ventanaCalendario
-    border: 2px solid $gris
-    +wh(600px,300px)
-    +marginTL(60px,550px)
-    position: absolute
-    box-sizing: border-box
-    position: absolute
-
-
 
 .resize-container 
     display: inline-block
