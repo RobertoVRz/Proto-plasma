@@ -14,47 +14,90 @@
   <title>Proto-Plasma</title>
 </head>
 <!--El escritorio-->
+
 <body class="bgDesktop">
   <div class="elEscritorio">
     <div class="elDocker">
       <div class="iconosPs">
-        <a onclick="activarVentanaCalendario()"><img class="icono" src="img/iconos/prto_diseño3d.svg"></a>
+        <a onclick="activarVentanaInfo()"><img class="icono" src="img/iconos/prto_diseño3d.svg"></a>
         <a onclick="activarVentanaMapa()"><img class="icono" src="img/iconos/proto_sombra_pin.svg"></a>
         <a onclick="activarVentanaContacto()"><img class="icono" src="img/iconos/proto_sombra_contacto.svg"></a>
       </div>
     </div>
-    
-<!--Area de ventanas-->
+
+    <!--Area de ventanas-->
     <div class="resize-container">
 
       <!--Accesos directos-->
-    <div class="AccDir">
-        <a onclick="activarVentanaInfo()"><img class="iconoDesktop" src="img/iconos/proto_sombra_web.svg"></a><br>
-        <label id="mision" >¿Quiénes somos?</label>
-    </div>
-<!--Ventana Info-->
-      <div class="ventanaInfo" id="ventana1" onclick="enfrenteInfo()" style="display:block">
+      <div class="AccDir">
+        <a onclick="activarVentanaMision()"><img class="iconoDesktop" src="img/iconos/proto_sombra_web.svg"></a><br>
+        <label id="mision">¿Quiénes somos?</label>
+      </div>
+      <!--Ventana Info-->
+      <div class="ventanaInfo" id="ventana1" onclick="enfrenteInfo()" style="display:none">
         <div class="barraUp">
           <a onclick="cerrarVentanaInfo()"><i class="fas fa-times-circle"></i></a>
           <span class="spanTitulo">Info</span>
         </div>
         <div class="contenidoVentanaInfo">
+          <div class="wrap">
+
             <div class="arduinoBox">
-            <img class="arduino" src="img/iconos/prto_arduino.svg">
-            <h1>Arduino</h1>
-            <p>A pesar de no ser tan conocido este término, los arduinos son herramientas que facilitan el uso de la electrónica en proyectos multidisciplinarios.</p>
-            <p>Éstos se encuentran en casi todos lados, pues permiten que la tecnología interaccione con el mundo, en otras palabras, podrás aprender a programar estos microprocesadores para que hagan múltiples cosas como  prender luces al ritmo de la música, manejar robots, hasta automatizar cualquier cosa, en fin, todo lo que se te ocurra diseñar.</p>
+              <img class="arduino" src="img/iconos/prto_arduino.svg">
+              <h1 class="tInfo">Arduino</h1>
+              <p class="pInfo">A pesar de no ser tan conocido este término, los arduinos son herramientas que facilitan el uso de la
+                electrónica en proyectos multidisciplinarios.</p>
+              <p class="pInfo">Éstos se encuentran en casi todos lados, pues permiten que la tecnología interaccione con el mundo, en
+                otras palabras, podrás aprender a programar estos microprocesadores para que hagan múltiples cosas como
+                prender luces al ritmo de la música, manejar robots, hasta automatizar cualquier cosa, en fin, todo lo
+                que se te ocurra diseñar.</p>
+            </div>
+
+            <div class="impresionBox">
+              <img class="arduino" src="img/iconos/prto_carpinteria.svg">
+              <h1 class="tInfo">Impresión 3D</h1>
+              <p class="pInfo">Aprovecha y aprende a plasmar tus ideas con las tecnologías modernas. En este taller te enseñaremos
+                los fundamentos de la impresión 3D, así como todo el proceso que involucra la materialización de tu
+                diseño. Aprenderás cómo se usan los programas de modelado 3D (sketch up) para diseñar y fabricar
+                objetos desde tu computadora.</p>
+            </div>
+            <div class="electroBox">
+              <img class="arduino" src="img/iconos/prto_electronica.svg">
+              <h1 class="tInfo">Electrónica</h1>
+              <p class="pInfo">La electrónica forma parte de tu día a día en numerosos aparatos que son de uso común; tu celular, el
+                refrigerador, las computadoras, un automóvil, etc. Aquí podrás aprender cómo funcionan objetos simples
+                que hay en tu casa, así como artefactos más complejos. </p>
+              <p class="pInfo">En el taller de electrónica te ofrecemos toda la capacitación que necesitas para tener un conocimiento
+                general y armar desde prototipos de bocinas, motores, una bobina Tesla hasta aquel proyecto de
+                tecnología que no sabías cómo elaborar.</p>
+            </div>
+            <div class="disenoBox">
+              <img class="arduino" src="img/iconos/prto_diseño3d.svg">
+              <h1 class="tInfo">Diseño 3d</h1>
+              <p class="pInfo">Aprender a modelar piezas y productos en 3D es una habilidad que te permitirá plasmar
+                tridimensionalmente formas más complejas para todo tipo de usos; desde una pieza de arte, tu propia
+                funda de celular, la placa de tu mascota, pines para tu mochila, hasta moldes de repostería, llaveros
+                personalizados, tuppers, modelado de personajes, entre otras cosas. Esto te permitirá obtener
+                conocimiento sobre lo que involucra el diseño.</p>
+            </div>
           </div>
-          
+
         </div>
       </div>
-<!--Ventana Mapa-->
+      <!--Ventana Mapa-->
       <div class="ventanaMapa" id="ventana4" onclick="enfrenteMapa()" style="display:none">
+        <div class="barraUp">
+          <a onclick="cerrarVentanaMapa()"><i class="fas fa-times-circle"></i></a>
+          <span class="spanTitulo">Mapa</span>
+        </div>
+        <div id="map"></div>
+      </div>
+
+      <div class="ventanaMision" id="ventana5" onclick="enfrenteMision()" style="display:none">
           <div class="barraUp">
-            <a onclick="cerrarVentanaMapa()"><i class="fas fa-times-circle"></i></a>
-            <span class="spanTitulo">Mapa</span>
+            <a onclick="cerrarVentanaMision()"><i class="fas fa-times-circle"></i></a>
+            <span class="spanTitulo">Misión, Visión y Valores</span>
           </div>
-          <div id="map"></div>
         </div>
 
       <div class="ventanaCalendario" id="ventana2" onclick="enfrenteCal()" style="display:none">
@@ -74,13 +117,13 @@
           <img class="iconoVentana" src="img/iconos/prto_contacto.svg">
           <p>(222) 293 3331</p>
           <div class="iconosAlineados">
-              <a href="https://www.facebook.com/protoplasma.mx/" target="_blank"><img class="icono" src="img/iconos/prto_fb.svg"></a>
-              <a href="https://www.instagram.com/protoplasma.mx/" target="_blank"><img class="icono" src="img/iconos/prto_insta.svg"></a>
-              <p>Protoplasma.mx</p>
-              <a onclick="activarVentanaMapa()"><img class="icono" src="img/iconos/prto_ubicacion.svg"></a>
-              <p>Circuito Olmeca 409 loc. 9<br>
+            <a href="https://www.facebook.com/protoplasma.mx/" target="_blank"><img class="icono" src="img/iconos/prto_fb.svg"></a>
+            <a href="https://www.instagram.com/protoplasma.mx/" target="_blank"><img class="icono" src="img/iconos/prto_insta.svg"></a>
+            <p>Protoplasma.mx</p>
+            <a onclick="activarVentanaMapa()"><img class="icono" src="img/iconos/prto_ubicacion.svg"></a>
+            <p>Circuito Olmeca 409 loc. 9<br>
               Santiago Momoxpan</p>
-            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -100,10 +143,9 @@
   <script src="js/jquery.nicescroll.min.js"></script>
 
   <script>
-    $(document).ready(function() {
-      $(".contenidoVentanaInfo").niceScroll(".wrap",{cursorcolor:"aquamarine"});
-      });
-    
+    $(document).ready(function () {
+      $(".contenidoVentanaInfo").niceScroll(".wrap").rezise();
+    });
   </script>
 
   <script>
@@ -121,6 +163,10 @@
 
     function activarVentanaMapa() {
       document.getElementById("ventana4").style.display = "block";
+    }
+
+    function activarVentanaMision() {
+      document.getElementById("ventana5").style.display = "block";
     }
   </script>
 
@@ -140,6 +186,10 @@
     function cerrarVentanaMapa() {
       document.getElementById("ventana4").style.display = "none";
     }
+
+    function cerrarVentanaMision() {
+      document.getElementById("ventana5").style.display = "none";
+    }
   </script>
   <script>
     function enfrenteInfo() {
@@ -147,6 +197,7 @@
       document.getElementById("ventana2").style.zIndex = "1";
       document.getElementById("ventana3").style.zIndex = "1";
       document.getElementById("ventana4").style.zIndex = "1";
+      document.getElementById("ventana5").style.zIndex = "1";
     }
 
     function enfrenteCal() {
@@ -155,6 +206,7 @@
       document.getElementById("ventana2").style.zIndex = "2";
       document.getElementById("ventana3").style.zIndex = "1";
       document.getElementById("ventana4").style.zIndex = "1";
+      document.getElementById("ventana5").style.zIndex = "1";
     }
 
     function enfrenteCont() {
@@ -162,6 +214,7 @@
       document.getElementById("ventana2").style.zIndex = "1";
       document.getElementById("ventana3").style.zIndex = "2";
       document.getElementById("ventana4").style.zIndex = "1";
+      document.getElementById("ventana5").style.zIndex = "1";
     }
 
     function enfrenteMapa() {
@@ -169,6 +222,15 @@
       document.getElementById("ventana2").style.zIndex = "1";
       document.getElementById("ventana3").style.zIndex = "1";
       document.getElementById("ventana4").style.zIndex = "2";
+      document.getElementById("ventana5").style.zIndex = "1";
+    }
+
+    function enfrenteMision() {
+      document.getElementById("ventana1").style.zIndex = "1";
+      document.getElementById("ventana2").style.zIndex = "1";
+      document.getElementById("ventana3").style.zIndex = "1";
+      document.getElementById("ventana4").style.zIndex = "1";
+      document.getElementById("ventana5").style.zIndex = "2";
     }
   </script>
 
@@ -187,51 +249,6 @@
             right: 1
           }
         },
-      })
-      .resizable({
-        // resize from all edges and corners
-        edges: {
-          left: true,
-          right: true,
-          bottom: true,
-          top: false
-        },
-
-        // keep the edges inside the parent
-        restrictEdges: {
-          outer: 'parent',
-          endOnly: true,
-        },
-
-        // minimum size
-        restrictSize: {
-          min: {
-            width: 100,
-            height: 50
-          },
-        },
-
-        inertia: true,
-      })
-      .on('resizemove', function (event) {
-        var target = event.target,
-          x = (parseFloat(target.getAttribute('data-x')) || 0),
-          y = (parseFloat(target.getAttribute('data-y')) || 0);
-
-        // update the element's style
-        target.style.width = event.rect.width + 'px';
-        target.style.height = event.rect.height + 'px';
-
-        // translate when resizing from top or left edges
-        x += event.deltaRect.left;
-        y += event.deltaRect.top;
-
-        target.style.webkitTransform = target.style.transform =
-          'translate(' + x + 'px,' + y + 'px)';
-
-        target.setAttribute('data-x', x);
-        target.setAttribute('data-y', y);
-        //target.textContent = Math.round(event.rect.width) + '\u00D7' + Math.round(event.rect.height);
       });
 
     function dragMoveListener(event) {
@@ -254,7 +271,7 @@
     window.dragMoveListener = dragMoveListener;
   </script>
 
-<script>
+  <script>
     // target elements with the "draggable" class
     interact('.ventanaMapa')
       .draggable({
@@ -499,26 +516,28 @@
     // this is used later in the resizing and gesture demos
     window.dragMoveListener = dragMoveListener;
   </script>
-  
-  <script>
-      function initMap() {
-        var uluru = {lat: 19.054439, lng: -98.297881};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 20,
-          center: uluru
-        });
-        var image = 'img/iconos/prto_ubicacion.svg';
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map,
-          icon: image
-        });
-      }
-    </script>
 
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgaoHSbtK3Czv9imqCA4sYxweRW_7pAAo&callback=initMap">
-    </script>
+  <script>
+    function initMap() {
+      var uluru = {
+        lat: 19.054439,
+        lng: -98.297881
+      };
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 20,
+        center: uluru
+      });
+      var image = 'img/iconos/prto_ubicacion.svg';
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map,
+        icon: image
+      });
+    }
+  </script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgaoHSbtK3Czv9imqCA4sYxweRW_7pAAo&callback=initMap">
+  </script>
 
 </body>
 

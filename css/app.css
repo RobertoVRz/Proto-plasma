@@ -5,6 +5,7 @@
   width: 100vw;
   height: 100vh;
   overflow-y: hidden;
+  overflow-x: hidden;
   padding-left: 20px;
   padding-right: 10px; }
 
@@ -49,7 +50,7 @@
 .ventanaInfo {
   border: 1px solid #D2D2D2;
   width: 600px;
-  height: 300px;
+  height: 493px;
   margin-top: -100px;
   margin-left: 450px;
   -webkit-border-radius: 10px;
@@ -57,9 +58,9 @@
   border-radius: 10px;
   position: absolute;
   box-sizing: border-box;
-  position: absolute;
   background-color: white;
-  z-index: 1; }
+  z-index: 1;
+  display: block; }
 
 .barraUp {
   background-color: #464646;
@@ -74,12 +75,50 @@
   cursor: pointer; }
 
 .contenidoVentanaInfo {
+  -webkit-border-radius: 0px 0px 10px 10px;
+  -moz-border-radius: 0px 0px 10px 10px;
+  border-radius: 0px 0px 10px 10px;
   text-align: center;
   width: 100%;
-  height: 100%; }
+  height: 95%; }
+
+.arduinoBox {
+  width: 100%;
+  height: 100%;
+  background: #18BBEE;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+.impresionBox {
+  width: 100%;
+  height: 100%;
+  background: purple;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+.electroBox {
+  width: 100%;
+  height: 100%;
+  background: red;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+.disenoBox {
+  width: 100%;
+  height: 100%;
+  background: black;
+  padding-right: 15px;
+  padding-left: 15px; }
 
 .arduino {
-  height: 200px; }
+  height: 200px;
+  margin-top: 10px; }
+
+.pInfo {
+  color: white; }
+
+.tInfo {
+  color: white; }
 
 .ventanaContacto {
   border: 1px solid #D2D2D2;
@@ -137,6 +176,21 @@
 #map {
   width: 100%;
   height: 100%; }
+
+.ventanaMision {
+  border: 1px solid #D2D2D2;
+  width: 950px;
+  height: 500px;
+  margin-top: -80px;
+  margin-left: 200px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  position: absolute;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: white;
+  z-index: 1; }
 
 .iconoDesktop {
   height: 60px;
