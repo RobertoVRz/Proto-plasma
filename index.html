@@ -19,9 +19,9 @@
   <div class="elEscritorio">
     <div class="elDocker">
       <div class="iconosPs">
-        <a onclick="activarVentanaInfo()"><img class="icono" src="img/iconos/prto_diseño3d.svg"></a>
-        <a onclick="activarVentanaMapa()"><img class="icono" src="img/iconos/proto_sombra_pin.svg"></a>
-        <a onclick="activarVentanaContacto()"><img class="icono" src="img/iconos/proto_sombra_contacto.svg"></a>
+        <a data-toggle="tooltip" title="Horarios" data-placement="bottom" onclick="activarVentanaInfo()"><img class="icono" src="img/iconos/prto_diseño3d.svg"></a>
+        <a data-toggle="tooltip" title="Ubicación" data-placement="bottom" onclick="activarVentanaMapa()"><img class="icono" src="img/iconos/proto_sombra_pin.svg"></a>
+        <a data-toggle="tooltip" title="Contacto" data-placement="bottom" onclick="activarVentanaContacto()"><img class="icono" src="img/iconos/proto_sombra_contacto.svg"></a>
       </div>
     </div>
 
@@ -30,7 +30,7 @@
 
       <!--Accesos directos-->
       <div class="AccDir">
-        <a onclick="activarVentanaMision()"><img class="iconoDesktop" src="img/iconos/proto_sombra_web.svg"></a><br>
+        <a onclick="activarVentanaMision()"><img class="iconoDesktop" src="img/iconos/logoproto.svg"></a><br>
         <label id="mision">¿Quiénes somos?</label>
       </div>
       <!--Ventana Info-->
@@ -54,7 +54,7 @@
             </div>
 
             <div class="impresionBox">
-              <img class="arduino" src="img/iconos/prto_carpinteria.svg">
+              <img class="arduino" src="img/iconos/3dprint.svg">
               <h1 class="tInfo">Impresión 3D</h1>
               <p class="pInfo">Aprovecha y aprende a plasmar tus ideas con las tecnologías modernas. En este taller te enseñaremos
                 los fundamentos de la impresión 3D, así como todo el proceso que involucra la materialización de tu
@@ -143,14 +143,17 @@
   <script src="js/jquery.nicescroll.min.js"></script>
 
   <script>
-    $(document).ready(function () {
-      $(".contenidoVentanaInfo").niceScroll(".wrap").rezise();
-    });
+    $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
   </script>
+
+ 
 
   <script>
     function activarVentanaInfo() {
       document.getElementById("ventana1").style.display = "block";
+      $(".contenidoVentanaInfo").niceScroll(".wrap");
     }
 
     function activarVentanaCalendario() {
@@ -274,6 +277,88 @@
   <script>
     // target elements with the "draggable" class
     interact('.ventanaMapa')
+      .draggable({
+        allowFrom: '.barraUp',
+        onmove: window.dragMoveListener,
+        restrict: {
+          restriction: 'parent',
+          elementRect: {
+            top: 0,
+            left: 0,
+            bottom: 1,
+            right: 1
+          }
+        },
+      })
+      .resizable({
+        // resize from all edges and corners
+        edges: {
+          left: true,
+          right: true,
+          bottom: true,
+          top: false
+        },
+
+        // keep the edges inside the parent
+        restrictEdges: {
+          outer: 'parent',
+          endOnly: true,
+        },
+
+        // minimum size
+        restrictSize: {
+          min: {
+            width: 100,
+            height: 50
+          },
+        },
+
+        inertia: true,
+      })
+      .on('resizemove', function (event) {
+        var target = event.target,
+          x = (parseFloat(target.getAttribute('data-x')) || 0),
+          y = (parseFloat(target.getAttribute('data-y')) || 0);
+
+        // update the element's style
+        target.style.width = event.rect.width + 'px';
+        target.style.height = event.rect.height + 'px';
+
+        // translate when resizing from top or left edges
+        x += event.deltaRect.left;
+        y += event.deltaRect.top;
+
+        target.style.webkitTransform = target.style.transform =
+          'translate(' + x + 'px,' + y + 'px)';
+
+        target.setAttribute('data-x', x);
+        target.setAttribute('data-y', y);
+        //target.textContent = Math.round(event.rect.width) + '\u00D7' + Math.round(event.rect.height);
+      });
+
+    function dragMoveListener(event) {
+      var target = event.target,
+        // keep the dragged position in the data-x/data-y attributes
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+      // translate the element
+      target.style.webkitTransform =
+        target.style.transform =
+        'translate(' + x + 'px, ' + y + 'px)';
+
+      // update the posiion attributes
+      target.setAttribute('data-x', x);
+      target.setAttribute('data-y', y);
+    }
+
+    // this is used later in the resizing and gesture demos
+    window.dragMoveListener = dragMoveListener;
+  </script>
+
+<script>
+    // target elements with the "draggable" class
+    interact('.ventanaMision')
       .draggable({
         allowFrom: '.barraUp',
         onmove: window.dragMoveListener,
