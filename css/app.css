@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,600,700|Roboto:300,400");
 @import url("https://fonts.googleapis.com/css?family=Zilla+Slab:300,400,600,700");
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100);
 .bgDesktop {
   background-color: #18BBEE;
   width: 100vw;
@@ -202,29 +201,40 @@
 #mision {
   color: white; }
 
-* {
-  box-sizing: border-box;
-  margin: 0; }
-
 .bodyCarga {
   padding: 0;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  display: flex;
-  font-family: Roboto; }
+  display: flex; }
 
 .loading-page {
   background: #18BBEE;
-  width: 500px;
-  height: 500px;
+  width: 416px;
+  height: 230px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 500px; }
+  margin-left: 545px;
+  margin-top: 87px;
+  position: absolute;
+  z-index: 2; }
 
 .counter {
-  text-align: center; }
+  text-align: center;
+  margin-top: 50px; }
+
+.zonaCompu {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f9d35c;
+  z-index: 0; }
+
+.compu {
+  width: 1200px !important;
+  position: absolute;
+  z-index: 1;
+  margin-left: 150px; }
 
 p {
   font-size: 40px;
@@ -240,7 +250,7 @@ hr {
   background: white;
   border: none;
   height: 1px;
-  margin-left: 500px; }
+  margin-left: 20px; }
 
 .counter {
   position: relative;
@@ -253,5 +263,16 @@ hr {
   width: 0px;
   overflow: hidden;
   color: #f60d54; }
+
+/*.zoom
+ * transition: width 2s, height 2s, transform 2s
+ * -moz-transition: width 2s, height 2s, -moz-transform 2s
+ * -webkit-transition: width 2s, height 2s, -webkit-transform 2s
+ * -o-transition: width 2s, height 2s,-o-transform 2s */
+/*.zoom:hover
+ * transform : scale(2)
+ * -moz-transform : scale(2)     
+ * -webkit-transform : scale(2) 
+ * -o-transform : scale(2)    */
 
 /*# sourceMappingURL=app.css.map */
