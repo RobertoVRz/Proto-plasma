@@ -17,7 +17,7 @@ session_start();
     <meta name="keyword" content="">
 
     <title>Proto-plasma</title>
-    <link rel="icon" type="image/png" id="dinamico" href="vistas/img/elfavicon/favnar.png" />
+    <link rel="icon" type="image/png" id="dinamico" href="vistas/img/iconos/faviconProto.png" />
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
@@ -38,6 +38,14 @@ session_start();
 
     <?php
 	include('controladores/controlador.docker.php');
+	
+	include('controladores/controlador.ventanaCalendario.php');
+	include('controladores/controlador.ventanaContacto.php');
+	include('controladores/controlador.ventanaInfo.php');
+	include('controladores/controlador.ventanaMapa.php');
+	include('controladores/controlador.ventanaMision.php');
+	
+
 	//include('modelos/modelo.conexion.php');
 	//Los controladores que se utilizan en todas las páginas, se incluyen fuera del if de abajo.
 	

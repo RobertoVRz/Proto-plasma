@@ -1,4 +1,4 @@
-<div class="ventanaInfo" id="ventana1" onclick="enfrenteInfo()" style="display:block">
+<div class="ventanaInfo" id="ventana1" onclick="enfrenteInfo()" style="display:none">
         <div class="barraUp">
           <a onclick="cerrarVentanaInfo()"><i class="fas fa-times-circle"></i></a>
           <span class="spanTitulo">Info</span>

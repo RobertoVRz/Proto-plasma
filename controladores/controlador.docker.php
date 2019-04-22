@@ -10,6 +10,8 @@
   function activarVentanaInfo() {
     document.getElementById("ventana1").style.display = "block";
     $(".contenidoVentanaInfo").niceScroll(".wrap");
+    //document.location.href = "?page=4";
+    
   }
 
   function activarVentanaCalendario() {
@@ -18,15 +20,16 @@
 
   function activarVentanaContacto() {
     document.getElementById("ventana3").style.display = "block";
+    //document.location.href = "?page=3";
   }
 
   function activarVentanaMapa() {
-    var abierto = 1;
-    if (abierto == 1){
-      document.location.href = "?page=5";
-    }
+    //var abierto = 1;
+    //if (abierto == 1){
+      //document.location.href = "?page=5";
+    //}
     
-    //document.getElementById("ventana4").style.display = "block";
+    document.getElementById("ventana4").style.display = "block";
   }
 
   function activarVentanaMision() {

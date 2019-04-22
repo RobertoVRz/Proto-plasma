@@ -28,7 +28,7 @@
 
 <body>
        <div class="zonaCompu">
-           <img class="compu zoom" src="img/carga-01.svg">
+           <img class="compu zoom" src="vistas/img/carga-01.svg">
            
            
             <div class="loading-page zoom">
