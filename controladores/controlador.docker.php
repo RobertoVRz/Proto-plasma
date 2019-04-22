@@ -1,6 +1,8 @@
 <script>
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
+
+    var abierto = 0;
   })
 </script>
 
@@ -19,7 +21,12 @@
   }
 
   function activarVentanaMapa() {
-    document.getElementById("ventana4").style.display = "block";
+    var abierto = 1;
+    if (abierto == 1){
+      document.location.href = "?page=5";
+    }
+    
+    //document.getElementById("ventana4").style.display = "block";
   }
 
   function activarVentanaMision() {
@@ -42,6 +49,7 @@
 
   function cerrarVentanaMapa() {
     document.getElementById("ventana4").style.display = "none";
+    abierto = 0;
   }
 
   function cerrarVentanaMision() {
