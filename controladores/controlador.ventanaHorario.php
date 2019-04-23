@@ -1,6 +1,6 @@
 <script>
     // target elements with the "draggable" class
-    interact('.ventanaCalendario')
+    interact('.ventanaHorario')
       .draggable({
         allowFrom: '.barraUp',
         onmove: window.dragMoveListener,

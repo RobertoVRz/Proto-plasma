@@ -2,19 +2,18 @@
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 
-    var abierto = 0;
   })
 </script>
 
 <script>
-  function activarVentanaInfo() {
+  function activarVentanaCursos() {
     document.getElementById("ventana1").style.display = "block";
-    $(".contenidoVentanaInfo").niceScroll(".wrap");
+    $(".contenidoVentanaCursos").niceScroll(".wrap");
     //document.location.href = "?page=4";
     
   }
 
-  function activarVentanaCalendario() {
+  function activarVentanaHorario() {
     document.getElementById("ventana2").style.display = "block";
   }
 
@@ -35,14 +34,27 @@
   function activarVentanaMision() {
     document.getElementById("ventana5").style.display = "block";
   }
+
+  function activarVentanaExamenes() {
+    document.getElementById("ventana6").style.display = "block";
+  }
+
+  function activarVentanaConfig() {
+    document.getElementById("ventana7").style.display = "block";
+  }
+
+  function activarVentanaTienda() {
+    document.getElementById("ventana8").style.display = "block";
+  }
+
 </script>
 
 <script>
-  function cerrarVentanaInfo() {
+  function cerrarVentanaCursos() {
     document.getElementById("ventana1").style.display = "none";
   }
 
-  function cerrarVentanaCalendario() {
+  function cerrarVentanaHorario() {
     document.getElementById("ventana2").style.display = "none";
   }
 
@@ -52,10 +64,21 @@
 
   function cerrarVentanaMapa() {
     document.getElementById("ventana4").style.display = "none";
-    abierto = 0;
   }
 
   function cerrarVentanaMision() {
     document.getElementById("ventana5").style.display = "none";
+  }
+
+  function cerrarVentanaExamenes() {
+    document.getElementById("ventana6").style.display = "none";
+  }
+
+  function cerrarVentanaConfig() {
+    document.getElementById("ventana7").style.display = "none";
+  }
+
+  function cerrarVentanaTienda() {
+    document.getElementById("ventana8").style.display = "none";
   }
 </script>

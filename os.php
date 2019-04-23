@@ -39,11 +39,14 @@ session_start();
     <?php
 	include('controladores/controlador.docker.php');
 	
-	include('controladores/controlador.ventanaCalendario.php');
+	include('controladores/controlador.ventanaHorario.php');
 	include('controladores/controlador.ventanaContacto.php');
-	include('controladores/controlador.ventanaInfo.php');
+	include('controladores/controlador.ventanaCursos.php');
 	include('controladores/controlador.ventanaMapa.php');
 	include('controladores/controlador.ventanaMision.php');
+	include('controladores/controlador.ventanaExamenes.php');
+	include('controladores/controlador.ventanaConfig.php');
+	include('controladores/controlador.ventanaTienda.php');
 	
 
 	//include('modelos/modelo.conexion.php');
@@ -65,7 +68,7 @@ session_start();
 
 			case '2':
 			//Perfil
-			include('controladores/controlador.ventanaCalendario.php');
+			include('controladores/controlador.ventanaHorario.php');
 			break;
 
 			case '3':
@@ -75,7 +78,7 @@ session_start();
 
 			case '4':
 			//Publicación
-			include('controladores/controlador.ventanaInfo.php');
+			include('controladores/controlador.ventanaCursos.php');
 			break;
 
 			case '5':
@@ -86,6 +89,11 @@ session_start();
 			case '6':
 			//Panel de publicaciones
 			include('controladores/controlador.ventanaMision.php');
+			break;
+
+			case '7':
+			//Panel de publicaciones
+			include('controladores/controlador.ventanaExamenes.php');
 			break;
 
 			case 'default':
@@ -122,7 +130,7 @@ elseif(isset($_GET['page'])){
 
 		case '2':
 		//Perfil
-		include('vistas/modulos/ventanaCalendario.php');
+		include('vistas/modulos/ventanaHorario.php');
 		break;
 
 		case '3':
@@ -133,7 +141,7 @@ elseif(isset($_GET['page'])){
 
 		case '4':
 		//Publicación
-		include('vistas/modulos/ventanaInfo.php');
+		include('vistas/modulos/ventanaCursos.php');
 		break;
 
 		case '5':
@@ -144,6 +152,11 @@ elseif(isset($_GET['page'])){
 		case '6':
 		//Panel de publicaciones
 		include('vistas/modulos/ventanaMision.php');
+		break;
+
+		case '7':
+		//Panel de publicaciones
+		include('vistas/modulos/ventanaExamenes.php');
 		break;
 
 

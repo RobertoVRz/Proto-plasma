@@ -54,7 +54,7 @@
   background-size: 300px;
 }
 
-.ventanaInfo {
+.ventanaCursos {
   border: 1px solid #D2D2D2;
   width: 600px;
   height: 493px;
@@ -84,7 +84,7 @@
   cursor: pointer;
 }
 
-.contenidoVentanaInfo {
+.contenidoVentanaCursos {
   -webkit-border-radius: 0px 0px 10px 10px;
   -moz-border-radius: 0px 0px 10px 10px;
   border-radius: 0px 0px 10px 10px;
@@ -130,11 +130,11 @@
   margin-top: 10px;
 }
 
-.pInfo {
+.pCursos {
   color: white;
 }
 
-.tInfo {
+.tCursos {
   color: white;
 }
 
@@ -164,7 +164,7 @@
   height: 60px;
 }
 
-.ventanaCalendario {
+.ventanaHorario {
   border: 1px solid #D2D2D2;
   width: 600px;
   height: 300px;

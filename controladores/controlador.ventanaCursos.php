@@ -1,6 +1,6 @@
 <script>
     // target elements with the "draggable" class
-    interact('.ventanaInfo')
+    interact('.ventanaCursos')
       .draggable({
         allowFrom: '.barraUp',
         onmove: window.dragMoveListener,
