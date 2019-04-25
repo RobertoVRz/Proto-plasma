@@ -7,24 +7,20 @@
   overflow-y: hidden;
   overflow-x: hidden;
   padding-left: 20px;
-  padding-right: 10px;
-}
+  padding-right: 10px; }
 
 .elEscritorio {
   width: 100%;
-  height: 100%;
-}
+  height: 100%; }
 
 .resize-container {
   display: inline-block;
   width: 100vw;
-  height: 1000px;
-}
+  height: 1000px; }
 
 .spanTitulo {
   color: white;
-  margin-left: auto;
-}
+  margin-left: auto; }
 
 /* Extra small devices (phones, 600px and down) */
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -34,31 +30,33 @@
 .elDocker {
   text-align: center;
   width: 100%;
-  bottom: 10px;
+  bottom: 15px;
   position: fixed;
-}
+  margin-left: -25px; }
 
 .icono {
-  height: 60px;
+  height: 80px;
   cursor: pointer;
-  margin: 10px;
-  margin-top: 2px;
-}
+  margin-top: -40px; }
 
 .iconosPs {
   width: 100%;
-  height: 100px;
+  height: 150px;
   background-image: url("../img/iconos/nuevoDock.svg");
-  background-position: center bottom;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: 300px;
-}
+  background-size: 620px;
+  display: flex;
+  justify-content: center; }
+
+.iconitoss {
+  margin-left: 25px; }
 
 .ventanaCursos {
   border: 1px solid #D2D2D2;
-  width: 600px;
+  width: 620px;
   height: 493px;
-  margin-top: -100px;
+  margin-top: 100px;
   margin-left: 450px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -67,76 +65,46 @@
   box-sizing: border-box;
   background-color: white;
   z-index: 1;
-  display: block;
-}
+  display: block; }
 
 .barraUp {
   background-color: #464646;
   -webkit-border-radius: 10px 10px 0px 0px;
   -moz-border-radius: 10px 10px 0px 0px;
   border-radius: 10px 10px 0px 0px;
-  height: 25px;
-}
+  height: 25px; }
 
 .fa-times-circle {
   color: red;
   margin: 5px;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .contenidoVentanaCursos {
   -webkit-border-radius: 0px 0px 10px 10px;
   -moz-border-radius: 0px 0px 10px 10px;
   border-radius: 0px 0px 10px 10px;
-  text-align: center;
   width: 100%;
-  height: 95%;
-}
+  height: 100%; }
 
-.arduinoBox {
+.flexCon {
   width: 100%;
-  height: 100%;
-  background: #18BBEE;
-  padding-right: 15px;
-  padding-left: 15px;
-}
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
 
-.impresionBox {
-  width: 100%;
-  height: 465px;
-  background: purple;
-  padding-right: 15px;
-  padding-left: 15px;
-}
+.iconoCarpeta {
+  height: 100px;
+  margin: 25px; }
 
-.electroBox {
-  width: 100%;
-  height: 465px;
-  background: red;
-  padding-right: 15px;
-  padding-left: 15px;
-}
+.labelCarpeta {
+  color: black; }
 
-.disenoBox {
-  width: 100%;
-  height: 465px;
-  background: black;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.arduino {
-  height: 200px;
-  margin-top: 10px;
-}
-
-.pCursos {
-  color: white;
-}
-
-.tCursos {
-  color: white;
-}
+.flexContenedorCursos {
+  margin: 25px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .ventanaContacto {
   border: 1px solid #D2D2D2;
@@ -151,18 +119,15 @@
   box-sizing: border-box;
   position: absolute;
   background-color: white;
-  z-index: 1;
-}
+  z-index: 1; }
 
 .contenidoVentana {
   text-align: center;
   width: 100%;
-  height: 100%;
-}
+  height: 100%; }
 
 .iconoVentana {
-  height: 60px;
-}
+  height: 60px; }
 
 .ventanaHorario {
   border: 1px solid #D2D2D2;
@@ -177,8 +142,7 @@
   box-sizing: border-box;
   position: absolute;
   background-color: white;
-  z-index: 1;
-}
+  z-index: 1; }
 
 .ventanaMapa {
   border: 1px solid #D2D2D2;
@@ -189,19 +153,31 @@
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: white;
+  z-index: 1; }
+
+#map {
+  width: 100%;
+  height: 100%; }
+
+.ventanaMision {
+  border: 1px solid #D2D2D2;
+  width: 950px;
+  height: 500px;
+  margin-top: 80px;
+  margin-left: 200px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
   position: absolute;
   box-sizing: border-box;
   position: absolute;
   background-color: white;
-  z-index: 1;
-}
+  z-index: 1; }
 
-#map {
-  width: 100%;
-  height: 100%;
-}
-
-.ventanaMision {
+.ventanaExamenes {
   border: 1px solid #D2D2D2;
   width: 950px;
   height: 500px;
@@ -214,27 +190,62 @@
   box-sizing: border-box;
   position: absolute;
   background-color: white;
-  z-index: 1;
-}
+  z-index: 1; }
+
+.ventanaConfig {
+  border: 1px solid #D2D2D2;
+  width: 950px;
+  height: 500px;
+  margin-top: -80px;
+  margin-left: 200px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  position: absolute;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: white;
+  z-index: 1; }
+
+.ventanaTienda {
+  border: 1px solid #D2D2D2;
+  width: 950px;
+  height: 500px;
+  margin-top: -80px;
+  margin-left: 200px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  position: absolute;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: white;
+  z-index: 1; }
 
 .iconoDesktop {
   height: 60px;
-  margin-top: 50px;
-  margin-left: 40px;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
-#mision {
+.mision {
   color: white;
-}
+  margin-top: -10px; }
+
+.flexContenedor {
+  margin-top: 25px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.AccDir {
+  position: absolute; }
 
 .bodyCarga {
   padding: 0;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  display: flex;
-}
+  display: flex; }
 
 .loading-page {
   background: #18BBEE;
@@ -246,69 +257,61 @@
   margin-left: 545px;
   margin-top: 87px;
   position: absolute;
-  z-index: 2;
-}
+  z-index: 2; }
 
 .counter {
   text-align: center;
-  margin-top: 50px;
-}
+  margin-top: 50px; }
 
 .zonaCompu {
   width: 100vw;
   height: 100vh;
   background-color: #f9d35c;
-  z-index: 0;
-}
+  z-index: 0; }
 
 .compu {
   width: 1200px !important;
   position: absolute;
   z-index: 1;
-  margin-left: 150px;
-}
+  margin-left: 150px; }
 
 p {
   font-size: 40px;
   font-weight: 100;
-  color: white;
-}
+  color: white; }
 
 .porcentaje {
   color: white;
   font-size: 60px;
-  margin-top: -10px;
-}
+  margin-top: -10px; }
 
 hr {
   background: white;
   border: none;
   height: 1px;
-  margin-left: 20px;
-}
+  margin-left: 20px; }
 
 .counter {
   position: relative;
   width: 200px;
   position: absolute;
   top: 0;
-  width: 100%;
-}
+  width: 100%; }
+
 .color {
   width: 0px;
   overflow: hidden;
-  color: #f60d54;
-}
+  color: #f60d54; }
 
-/*.zoom 
- *  transition: width 2s, height 2s, transform 2s
- *  -moz-transition: width 2s, height 2s, -moz-transform 2s
- *  -webkit-transition: width 2s, height 2s, -webkit-transform 2s
- *  -o-transition: width 2s, height 2s,-o-transform 2s */
+/*.zoom
+ * transition: width 2s, height 2s, transform 2s
+ * -moz-transition: width 2s, height 2s, -moz-transform 2s
+ * -webkit-transition: width 2s, height 2s, -webkit-transform 2s
+ * -o-transition: width 2s, height 2s,-o-transform 2s */
 /*.zoom:hover
- *  transform : scale(2)
- *  -moz-transform : scale(2)     
- *  -webkit-transform : scale(2) 
- *  -o-transform : scale(2)    */
+ * transform : scale(2)
+ * -moz-transform : scale(2)     
+ * -webkit-transform : scale(2) 
+ * -o-transform : scale(2)    */
 
 /*# sourceMappingURL=app.css.map */

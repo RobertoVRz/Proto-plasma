@@ -1,24 +1,32 @@
 <div class="elDocker">
   <div class="iconosPs">
-    <a data-toggle="tooltip" title="Horarios" data-placement="bottom"  onclick="activarVentanaHorario()"><img class="icono"
-        src="vistas/img/iconos/horario.svg"></a>
-    <a data-toggle="tooltip" title="Exámenes" data-placement="bottom" onclick="activarVentanaExamenes()"><img class="icono"
-        src="vistas/img/iconos/examenes.svg"></a>
-    <a data-toggle="tooltip" title="Ubicación" data-placement="bottom" onclick="activarVentanaMapa()" ><img class="icono"
-        src="vistas/img/iconos/proto_sombra_pin.svg"></a>
-    <a data-toggle="tooltip" title="Contacto" data-placement="bottom" onclick="activarVentanaContacto()"><img class="icono"
-        src="vistas/img/iconos/proto_sombra_contacto.svg"></a>
-    <a data-toggle="tooltip" title="Configuración" data-placement="bottom" onclick="activarVentanaConfig()"><img class="icono"
-        src="vistas/img/iconos/proto_sombra_perfil.svg"></a>
+    <div class="iconosFlex">
+      <a class="iconitoss" data-balloon="Horario" data-balloon-pos="down" onclick="activarVentanaHorario()"><img class="icono"
+          src="vistas/img/iconos/newicons/horario.svg"></a>
+      <a class="iconitoss" data-balloon="Exámenes" data-balloon-pos="down" onclick="activarVentanaExamenes()"><img class="icono"
+          src="vistas/img/iconos/newicons/examenes.svg"></a>
+      <a class="iconitoss" data-balloon="Mapa" data-balloon-pos="down"  onclick="activarVentanaMapa()" ><img class="icono"
+          src="vistas/img/iconos/newicons/ubicacion.svg"></a>
+      <a class="iconitoss" data-balloon="Contacto" data-balloon-pos="down" onclick="activarVentanaContacto()"><img class="icono"
+          src="vistas/img/iconos/newicons/telefono.svg"></a>
+      <a class="iconitoss" data-balloon="Configuración" data-balloon-pos="down"  onclick="activarVentanaConfig()"><img class="icono"
+          src="vistas/img/iconos/newicons/conf.svg"></a>
+    </div>
   </div>
 </div>
 <div class="AccDir">
-  <a onclick="activarVentanaMision()"><img class="iconoDesktop" src="vistas/img/iconos/logoproto.svg"></a><br>
-  <label id="mision">¿Quiénes somos?</label><br>
-  <a onclick="activarVentanaCursos()"><img class="iconoDesktop" src="vistas/img/iconos/cursos.svg"></a><br>
-  <label id="cursos">Cursos</label><br>
-  <a onclick="activarVentanaTienda()"><img class="iconoDesktop" src="vistas/img/iconos/tienda.svg"></a><br>
-  <label id="tienda">Tienda</label><br>
+  <div class="flexContenedor">
+    <a  onclick="activarVentanaMision()"><img class="iconoDesktop" src="vistas/img/iconos/logoproto.svg"></a><br>
+    <label class="mision">¿Quiénes somos?</label>
+  </div><br>
+  <div class="flexContenedor">
+    <a onclick="activarVentanaCursos()"><img class="iconoDesktop" src="vistas/img/iconos/cursos.svg"></a><br>
+    <label class="mision">Cursos</label>
+  </div><br>
+  <div class="flexContenedor">
+    <a onclick="activarVentanaTienda()"><img class="iconoDesktop" src="vistas/img/iconos/tienda.svg"></a><br>
+    <label class="mision">Tienda</label>
+  </div><br>
 </div>
 
 <?php
