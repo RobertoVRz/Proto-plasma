@@ -5,14 +5,12 @@
   </div>
   <div class="contenidoVentana">
     <img class="iconoVentana" src="vistas/img/iconos/prto_contacto.svg">
-    <p>(222) 293 3331</p>
+    <p class="textoAzul">(222) 293 3331</p><br>
     <div class="iconosAlineados">
       <a href="https://www.facebook.com/protoplasma.mx/" target="_blank"><img class="icono" src="vistas/img/iconos/prto_fb.svg"></a>
-      <a href="https://www.instagram.com/protoplasma.mx/" target="_blank"><img class="icono" src="vistas/img/iconos/prto_insta.svg"></a>
-      <p>Protoplasma.mx</p>
-      <a onclick="activarVentanaMapa()"><img class="icono" src="vistas/img/iconos/prto_ubicacion.svg"></a>
-      <p>Circuito Olmeca 409 loc. 9<br>
-              Santiago Momoxpan</p>
+      <a href="https://www.instagram.com/protoplasma.mx/" target="_blank"><img class="icono" src="vistas/img/iconos/prto_insta.svg"></a><br><br>
+      <p class="textoAzul">Protoplasma.mx</p>
+      
     </div>
   </div>
   </div>

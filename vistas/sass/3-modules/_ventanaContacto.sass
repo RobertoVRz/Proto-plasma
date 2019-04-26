@@ -1,18 +1,24 @@
 .ventanaContacto
-    border: 1px solid $gris
+    border: 1px solid $oscuro
     +wh(600px,420px)
     +marginTL(0px,750px)
     +redondeado(10px)
     position: absolute
     box-sizing: border-box
     position: absolute
-    background-color: white
+    background-color: $oscuro
     z-index: 1
 
 .contenidoVentana
     text-align: center
     width: 100%
     height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
 
 .iconoVentana
-    height: 60px
+    height: 80px
+
+.textoAzul
+    color: $azul

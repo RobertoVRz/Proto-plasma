@@ -20,7 +20,7 @@
     <label class="mision">¿Quiénes somos?</label>
   </div><br>
   <div class="flexContenedor">
-    <a onclick="activarVentanaCursos()"><img class="iconoDesktop" src="vistas/img/iconos/cursos.svg"></a><br>
+    <a onclick="activarVentanaCursos()"><img class="iconoDesktop" src="vistas/img/iconos/elsombrerito.svg"></a><br>
     <label class="mision">Cursos</label>
   </div><br>
   <div class="flexContenedor">
