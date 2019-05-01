@@ -8,7 +8,7 @@
 <script>
   function activarVentanaCursos() {
     document.getElementById("ventana1").style.display = "block";
-    $(".contenidoVentanaCursos").niceScroll(".wrap");
+    
     //document.location.href = "?page=4";
     
   }
@@ -33,6 +33,7 @@
 
   function activarVentanaMision() {
     document.getElementById("ventana5").style.display = "block";
+    $(".contenidoVentanaMision").niceScroll(".wrap");
   }
 
   function activarVentanaExamenes() {

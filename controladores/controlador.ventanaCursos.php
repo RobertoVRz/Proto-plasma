@@ -1,4 +1,5 @@
 <script>
+
     // target elements with the "draggable" class
     interact('.ventanaCursos')
     .draggable({
@@ -78,4 +79,46 @@
 
     // this is used later in the resizing and gesture demos
     window.dragMoveListener = dragMoveListener;
+
+    function arduino() {
+      $('.flexCon').hide();
+      $('#arduinoZone').css('display','block');
+    }
+
+    function diseño() {
+      $('.flexCon').hide();
+      $('#diseñoZone').css('display','block');
+    }
+
+    function carpinteria() {
+      $('.flexCon').hide();
+      $('#carpinteriaZone').css('display','block');
+    }
+
+    function robotica() {
+      $('.flexCon').hide();
+      $('#roboticaZone').css('display','block');
+    }
+
+    function programacion() {
+      $('.flexCon').hide();
+      $('#programacionZone').css('display','block');
+    }
+
+    function regresar() {
+      $('.flexCon').show();
+      $('#arduinoZone').css('display','none');
+      $('#diseñoZone').css('display','none');
+      $('#carpinteriaZone').css('display','none');
+      $('#roboticaZone').css('display','none');
+      $('#programacionZone').css('display','none');
+    }
+
+
+
+
+
   </script>
+
+
+
