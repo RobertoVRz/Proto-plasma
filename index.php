@@ -28,7 +28,7 @@
 <!--El escritorio-->
 
 <body>
-       <div class="zonaCompu">
+       <div class="zonaCompu" id="div1" style="display: block;">
            <img class="compu zoom" src="vistas/img/carga-01.svg">
            
            
@@ -45,6 +45,10 @@
                 </div>
             </div>
            
+       </div>
+
+       <div class="miniEscritorio" id="miniEsc" style="display: none;">
+            <img class="escritorioZoom" id="miniEsc2" src="vistas/img/escritorioCompleto.png">
        </div>
 
 
@@ -68,7 +72,13 @@
       
     if(counter == 101) {
         clearInterval(i);
-        document.location.href = "../Proto-plasma/os.php";
+        $("#miniEsc").css("display","block");
+        $("#div1").css("display","none");
+        //$(".miniEscritorio").addClass('animacion');
+
+
+        
+        //document.location.href = "../Proto-plasma/os.php";
     }
   }, 50);
 });
