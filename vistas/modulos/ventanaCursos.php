@@ -23,16 +23,15 @@
         <label class="labelCarpeta">Robótica</label>
       </div>
       <div class="flexContenedorCursos">
-        <img class="iconoCarpeta" src="vistas/img/iconos/folderProgra.svg" onclick="programacion()">
+        <img class="iconoCarpeta" src="vistas/img/iconos/fol derProgra.svg" onclick="programacion()">
         <label class="labelCarpeta">Programación</label>
       </div>
     </div>
 
     <div class="zonaTipo" id="arduinoZone" >
       <img onclick="regresar()" class="imgCursos" src="vistas/img/iconos/prto_arduino.svg">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, modi? Omnis, accusamus! Possimus, molestias!
-        Rerum tenetur perspiciatis ducimus incidunt illum dolores enim tempora adipisci nulla, sapiente quia,
-        cupiditate, facilis animi.</p>
+      <p>Los microcontroladores como el Arduino son herramientas que facilitan el uso de la electrónica en proyectos multidisciplinarios. Son herramientas muy poderosas pues permiten que la tecnología interaccione con el mundo, en otras palabras, podrás aprender a programar estos microprocesadores para que hagan múltiples cosas como prender luces al ritmo de la música, manejar robots, automatizar un proceso ―en fin― todo lo que se te ocurra diseñar.
+      </p>
     </div>
 
     <div onclick="regresar()" class="zonaTipo" id="diseñoZone" >
