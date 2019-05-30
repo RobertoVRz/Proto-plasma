@@ -53,6 +53,7 @@
 <script>
   function cerrarVentanaCursos() {
     document.getElementById("ventana1").style.display = "none";
+    $(".cursito").niceScroll(".wrap");
   }
 
   function cerrarVentanaHorario() {

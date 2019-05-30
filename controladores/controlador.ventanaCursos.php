@@ -34,7 +34,7 @@
         restrictSize: {
           min: {
             width: 620,
-            height: 470
+            height: 493
           },
         },
 
@@ -83,35 +83,40 @@
     function arduino() {
       $('.flexCon').hide();
       $('#arduinoZone').css('display','block');
+      $(".scrollCurso").niceScroll(".wrap",{cursorcolor:"white",cursorborder:"none"});
     }
 
     function diseño() {
       $('.flexCon').hide();
-      $('#diseñoZone').css('display','block');
+      $('#disenoZone').css('display','block');
+      $(".scrollCurso").niceScroll(".wrap",{cursorcolor:"white",cursorborder:"none"});
     }
 
     function carpinteria() {
       $('.flexCon').hide();
-      $('#carpinteriaZone').css('display','block');
+      $('#electroZone').css('display','block');
+      $(".scrollCurso").niceScroll(".wrap",{cursorcolor:"white",cursorborder:"none"});
     }
 
     function robotica() {
       $('.flexCon').hide();
       $('#roboticaZone').css('display','block');
+      $(".scrollCurso").niceScroll(".wrap",{cursorcolor:"white",cursorborder:"none"});
     }
 
     function programacion() {
       $('.flexCon').hide();
-      $('#programacionZone').css('display','block');
+      $('#impresionZone').css('display','block');
+      $(".scrollCurso").niceScroll(".wrap",{cursorcolor:"white",cursorborder:"none"});
     }
 
     function regresar() {
       $('.flexCon').show();
       $('#arduinoZone').css('display','none');
-      $('#diseñoZone').css('display','none');
-      $('#carpinteriaZone').css('display','none');
+      $('#disenoZone').css('display','none');
+      $('#electroZone').css('display','none');
       $('#roboticaZone').css('display','none');
-      $('#programacionZone').css('display','none');
+      $('#impresionZone').css('display','none');
     }
 
 

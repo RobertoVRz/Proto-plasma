@@ -1,7 +1,7 @@
 .ventanaCursos
-    border: 1px solid $gris
-    +wh(620px,493px)
-    +marginTL(100px,450px)
+    border: 1px solid $oscuro
+    +wh(1000px,493px)
+    +marginTL(100px,350px)
     +redondeado(10px)
     position: absolute
     box-sizing: border-box
@@ -19,11 +19,19 @@
     margin: 5px
     cursor: pointer
 
+
+// Contenedor de las carpetas de cursos
 .contenidoVentanaCursos
     +redondeado(0px 0px 10px 10px)
     width: 100%
     height: 100%
     
+.flexContenedorCursos
+    margin: 20px
+    width: 150px
+    display: flex
+    flex-direction: column
+    align-items: center
 
 .flexCon
     width: 100%
@@ -31,23 +39,83 @@
     flex-wrap: wrap
     justify-content: space-around
 
+
 .iconoCarpeta
     height: 100px
     margin: 25px
-    
+    cursor: pointer
+
 
 .labelCarpeta
     color: black
 
-.flexContenedorCursos
-    margin: 25px
-    width: 150px
-    display: flex
-    flex-direction: column
-    align-items: center
+//configuracion de la vistas de los cursos
 
 .zonaTipo
     display: none
+    height: 95%
+    +redondeado(0px 0px 10px 10px)
+
+.flexCurso
+    display: flex
+    flex-direction: row
+    +redondeado(0px 0px 10px 10px)
+    height: 100%
+
+.return
+    color: white
+    font-size: 30px
+    margin: 15px
+    cursor: pointer
+    position: absolute
+
+//zona izquierda
+.cursoIzq
+    display: flex
+    align-items: center
+    height: 100%
+
+.imgCursos
+    height: 150px
+    padding: 10px
+
+//zona derecha
+
+.tituloCurso
+    color: white
+
+.cursoDer
+    display: flex
+    align-items: center
+    padding: 20px
+    flex-direction: column
+
+
+.scrollCurso
+    height: 300px
+    padding: 20px
+
+.cursoP
+    font-size: 20px
+    
+    
 
 #arduinoZone
     background-color: $azul
+
+#disenoZone
+    background-color: $azul
+    
+#electroZone
+    background-color: $azul
+    
+#roboticaZone
+    background-color: $azul
+    
+#impresionZone
+    background-color: $azul
+    
+
+    
+
+    
