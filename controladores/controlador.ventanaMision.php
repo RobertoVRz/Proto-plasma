@@ -32,8 +32,8 @@
         // minimum size
         restrictSize: {
           min: {
-            width: 100,
-            height: 50
+            width: 870,
+            height: 580
           },
         },
 

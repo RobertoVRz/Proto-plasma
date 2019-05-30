@@ -152,7 +152,8 @@
   padding: 20px; }
 
 .cursoP {
-  font-size: 20px; }
+  font-size: 20px;
+  text-align: justify; }
 
 #arduinoZone {
   background-color: #18BBEE; }
@@ -234,7 +235,7 @@
 .ventanaMision {
   border: 1px solid #464646;
   width: 950px;
-  height: 500px;
+  height: 580px;
   margin-top: 80px;
   margin-left: 200px;
   -webkit-border-radius: 10px;
@@ -247,18 +248,26 @@
   z-index: 1; }
 
 .contenidoVentanaMision {
-  height: 90%; }
+  height: 94%; }
 
 .misionZone {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  justify-content: space-around; }
 
 .visionZone {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  justify-content: space-around; }
 
 .imgMision {
-  height: 300px; }
+  height: 250px; }
+
+.textoMV {
+  font-size: 20px;
+  width: 50%;
+  text-align: justify;
+  padding: 10px; }
 
 .ventanaExamenes {
   border: 1px solid #D2D2D2;
