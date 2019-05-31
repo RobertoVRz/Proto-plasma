@@ -39,6 +39,7 @@ session_start();
 
     <?php
 	include('controladores/controlador.docker.php');
+	include('controladores/controlador.desktop.php');
 	
 	include('controladores/controlador.ventanaHorario.php');
 	include('controladores/controlador.ventanaContacto.php');

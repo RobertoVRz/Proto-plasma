@@ -16,7 +16,7 @@
       </div>
       <div class="flexContenedorCursos">
         <img class="iconoCarpeta" src="vistas/img/iconos/folderElectro.svg" onclick="carpinteria()">
-        <label class="labelCarpeta">Carpintería</label>
+        <label class="labelCarpeta">Electrónica</label>
       </div>
       <div class="flexContenedorCursos">
         <img class="iconoCarpeta" src="vistas/img/iconos/folderRobot.svg" onclick="robotica()">

@@ -79,3 +79,30 @@
     // this is used later in the resizing and gesture demos
     window.dragMoveListener = dragMoveListener;
   </script>
+
+  <script>
+  function colorAzul(){
+    $(".bgDesktop").css("background-color", "#14B9ED");
+    $(".mision").css("color", "white");
+  }
+
+  function colorNegro(){
+    $(".bgDesktop").css("background-color", "#464646");
+    $(".mision").css("color", "white");
+  }
+
+  function colorAmarillo(){
+    $(".bgDesktop").css("background-color", "#F7C046");
+    $(".mision").css("color", "white");
+  }
+
+  function colorRojo(){
+    $(".bgDesktop").css("background-color", "#DD2A40");
+    $(".mision").css("color", "white");
+  }
+
+  function colorBlanco(){
+    $(".bgDesktop").css("background-color", "white");
+    $(".mision").css("color", "black");
+  }
+  </script>

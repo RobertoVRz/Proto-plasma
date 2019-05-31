@@ -5,7 +5,7 @@
   </div>
   <div class="contenidoVentana">
     <img class="iconoVentana" src="vistas/img/iconos/prto_contacto.svg">
-    <p class="textoAzul">(222) 293 3331</p><br>
+    <p class="textoAzul">(222) 605 2418</p><br>
     <div class="iconosAlineados">
       <a href="https://www.facebook.com/protoplasma.mx/" target="_blank"><img class="icono" src="vistas/img/iconos/prto_fb.svg"></a>
       <a href="https://www.instagram.com/protoplasma.mx/" target="_blank"><img class="icono" src="vistas/img/iconos/prto_insta.svg"></a><br><br>
