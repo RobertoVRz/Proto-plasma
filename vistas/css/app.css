@@ -37,7 +37,11 @@
 .icono {
   height: 80px;
   cursor: pointer;
-  margin-top: -40px; }
+  margin-top: -40px;
+  transition: transform 0.2s; }
+
+.iconitoss:hover .icono {
+  transform: scale(1.5); }
 
 .iconosPs {
   width: 100%;
